@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login Form</title>
+  <link rel="stylesheet" href="/blood1.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>User Login Form</h2>
+
+    <form id="loginForm" action="/login" method="POST">
+      <div class="input-group">
+        <label class="colorful-label">Username:</label>
+        <input type="text" name="username" placeholder="Phone (or) Email" required>
+      </div>
+
+      <div class="input-group">
+        <label class="colorful-label password-label">Password:</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <!-- Captcha -->
+      <div class="captcha-container">
+        <div class="captcha-box">
+          <span id="captcha-text"></span>
+          <button type="button" id="refresh-btn" title="Refresh Captcha">🔄</button>
+        </div>
+        <input type="hidden" name="generatedCaptcha" id="generatedCaptcha">
+        <input type="text" id="captcha-input" name="captcha" placeholder="Enter captcha" required>
+
+        <div class="robot-check">
+          <input type="checkbox" id="robot-check" name="robot">
+          <label for="robot-check">I'm not a robot 🤖</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+
+      <div class="login-footer">
+        <p>— or —</p>
+        <button type="button" class="google-btn">
+          Continue with Google 
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="google-icon">
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="/blood1.js"></script>
+</body>
+</html>
